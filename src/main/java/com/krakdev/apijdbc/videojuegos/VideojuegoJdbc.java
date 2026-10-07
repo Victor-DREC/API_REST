@@ -29,7 +29,7 @@ public class VideojuegoJdbc {
 
 			con = Conexion.getConnection();
 			String sql = """
-						INSERT INTO clientes(codigo, nombre, plataforma, precio, disponible, genero) VALUES (?,?,?,?,?,?)
+						INSERT INTO videojuegos(codigo, nombre, plataforma, precio, disponible, genero) VALUES (?,?,?,?,?,?)
 					""";
 
 			ps = con.prepareStatement(sql);
@@ -209,7 +209,12 @@ public class VideojuegoJdbc {
 				
 				ps.setString(1, codigo);
 				
+
+				int filas = ps.executeUpdate();	
+				log.info("Videojuegos eliminados: "+filas);
+				
 				return true;
+				
 				
 			}catch(Exception e) {
 				log.error("Error al eliminar: "+e.getMessage());

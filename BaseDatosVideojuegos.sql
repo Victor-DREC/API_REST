@@ -1,4 +1,3 @@
-DROP TABLE clientes;
 
 CREATE TABLE videojuegos(
 	codigo VARCHAR(10) PRIMARY KEY,

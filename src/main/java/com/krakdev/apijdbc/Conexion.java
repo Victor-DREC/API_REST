@@ -12,7 +12,7 @@ public class Conexion {
 	// Se importa de java.sql
 	private static final Logger log = LogManager.getLogger(Conexion.class);
 
-	private static final String URL = "jdbc:postgresql://localhost:5433/postgres";
+	private static final String URL = "jdbc:postgresql://localhost:5433/apijdbc";
 	private static final String USER = "postgres";
 	private static final String PASSWORD = "Alexander2412";
 
